@@ -8,17 +8,19 @@ UNIQUE_TEST := $(BIN_DIR)/test_unique
 MYSTACK_TEST := $(BIN_DIR)/test_mystack
 OPTIONAL_TEST := $(BIN_DIR)/test_optional
 VARIANT_TEST := $(BIN_DIR)/test_variant
+MYMATRIX_TEST := $(BIN_DIR)/test_mymatrix
 
 .PHONY: all test clean
 
 all: test
 
-test: $(SHARED_TEST) $(UNIQUE_TEST) $(MYSTACK_TEST) $(OPTIONAL_TEST) $(VARIANT_TEST)
+test: $(SHARED_TEST) $(UNIQUE_TEST) $(MYSTACK_TEST) $(OPTIONAL_TEST) $(VARIANT_TEST) $(MYMATRIX_TEST)
 	./$(SHARED_TEST)
 	./$(UNIQUE_TEST)
 	./$(MYSTACK_TEST)
 	./$(OPTIONAL_TEST)
 	./$(VARIANT_TEST)
+	./$(MYMATRIX_TEST)
 
 $(BIN_DIR):
 	mkdir -p $(BIN_DIR)
@@ -37,6 +39,9 @@ $(OPTIONAL_TEST): myoptional/test_myoptional.cpp myoptional/myoptional.hpp | $(B
 
 $(VARIANT_TEST): myvariant/test_myvariant.cpp myvariant/myvariant.hpp | $(BIN_DIR)
 	$(CXX) $(CXXFLAGS) myvariant/test_myvariant.cpp -o $(VARIANT_TEST)
+
+$(MYMATRIX_TEST): mymatrix/test_mymatrix.cpp mymatrix/mymatrix.hpp | $(BIN_DIR)
+	$(CXX) $(CXXFLAGS) mymatrix/test_mymatrix.cpp -o $(MYMATRIX_TEST)
 
 clean:
 	rm -rf $(BIN_DIR)

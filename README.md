@@ -7,6 +7,7 @@ A small C++ practice repository that implements custom pointer/data-structure ut
 - `unique_pointer/uniquepointer.hpp` – basic move-only smart pointer.
 - `shared_pointer/shared_pointer.hpp` – basic reference-counted smart pointer.
 - `myvector/myvector.hpp` – custom dynamic array implementation.
+- `mymatrix/mymatrix.hpp` – custom 2D matrix container.
 - `mystack/mystack.hpp` – custom stack (LIFO) container (new).
 
 ## Tests
