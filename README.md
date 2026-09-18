@@ -1,5 +1,7 @@
 # memory_pointer
 
+[![C++ CI](https://github.com/tahazz5/cpp_taha_own_biblo/actions/workflows/ci.yml/badge.svg)](https://github.com/tahazz5/cpp_taha_own_biblo/actions/workflows/ci.yml)
+
 A small C++ practice repository that implements custom pointer/data-structure utilities.
 
 ## Libraries
